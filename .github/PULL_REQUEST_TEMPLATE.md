@@ -23,6 +23,10 @@ Explain whether this change affects filesystem access, cleanup, Trash actions, p
 # paste commands and results
 ```
 
+## Changelog
+
+- [ ] I updated `CHANGELOG.md`, or this change is not user-facing.
+
 ## Screenshots / videos
 
 Add screenshots for UI changes.

@@ -6,6 +6,7 @@
 - [ ] License confirmed.
 - [ ] Public repository disclaimer remains accurate while name is uncleared.
 - [ ] README updated.
+- [ ] `CHANGELOG.md` has an up-to-date `[Unreleased]` section.
 - [ ] Safety model implemented and reviewed.
 - [ ] No permanent delete code path exists.
 - [ ] No telemetry code path exists.
@@ -37,7 +38,9 @@ Initial source/dev build releases may skip signing/notarization while clearly do
 ## GitHub Release checklist
 
 - [ ] Tag created.
+- [ ] `[Unreleased]` changelog entries moved into the released version section.
 - [ ] Release notes written.
+- [ ] Release notes link back to the matching `CHANGELOG.md` section.
 - [ ] DMG uploaded.
 - [ ] Checksum uploaded.
 - [ ] Known issues listed.
