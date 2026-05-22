@@ -8,6 +8,10 @@ Short summary of this release.
 
 - ...
 
+## Changelog
+
+- Link to the version section in `CHANGELOG.md`.
+
 ## Safety notes
 
 - Monocle does not permanently delete files.
@@ -17,6 +21,12 @@ Short summary of this release.
 ## Known limitations
 
 - ...
+
+## Checks run
+
+```text
+<commands and results>
+```
 
 ## Checksums
 
