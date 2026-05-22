@@ -1,0 +1,27 @@
+name: Safety concern
+description: Report a non-private safety concern related to filesystem behavior
+title: "safety: "
+labels: ["kind:security", "area:safety", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If this is an exploitable vulnerability or could cause private data exposure, use SECURITY.md instead of a public issue.
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: What safety issue did you notice?
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: How could this affect a user?
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested mitigation

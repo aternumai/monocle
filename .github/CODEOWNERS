@@ -1,0 +1,13 @@
+# Safety-sensitive areas should be reviewed by maintainers.
+
+/AGENTS.md @maintainers
+/docs/03-safety-model.md @maintainers
+/docs/adr/ @maintainers
+/SECURITY.md @maintainers
+/.github/ @maintainers
+
+# Future implementation paths
+/src-tauri/src/safety/ @maintainers
+/src-tauri/src/commands/ @maintainers
+/src-tauri/src/caches/ @maintainers
+/src-tauri/src/duplicates/ @maintainers

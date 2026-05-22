@@ -1,0 +1,27 @@
+name: ADR proposal
+description: Propose a design decision that should be recorded
+title: "adr: "
+labels: ["kind:adr", "status:needs-triage"]
+body:
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision to make
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options considered
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+    validations:
+      required: true

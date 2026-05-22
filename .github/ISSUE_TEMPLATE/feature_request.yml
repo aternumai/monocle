@@ -1,0 +1,39 @@
+name: Feature request
+description: Suggest a new feature or improvement
+title: "feat: "
+labels: ["kind:feature", "status:needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should Monocle do?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Large files
+        - Duplicates
+        - Cache analyzer
+        - Safety / Trash
+        - macOS permissions
+        - UI / UX
+        - Documentation
+        - Other
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety considerations
+      description: Could this affect filesystem access, deletion, privacy, or permissions?
+    validations:
+      required: true
