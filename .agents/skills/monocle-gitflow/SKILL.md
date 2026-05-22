@@ -7,22 +7,25 @@ description: Use when working on Monocle branch, commit, merge, or milestone del
 
 ## Branch Model
 
-- `main` contains consolidated documentation and completed milestone work.
+- `main` contains released versions only.
 - `develop` is the active integration branch.
-- Milestone or task branches should be short-lived and branch from `develop`.
-- Use the `codex/` prefix for Codex-created branches unless the user asks for a different name.
+- Every repository change must be made on a short-lived `feat/*` or `fix/*` branch created from `develop`.
+- Use `feat/*` for new behavior, documentation workflow updates, and planned improvements.
+- Use `fix/*` for bug fixes, regressions, or corrective follow-up work.
 
 ## Merge Cadence
 
-- Merge `develop` into `main` after documentation decisions are consolidated.
-- During implementation, merge completed milestone work to `main` after local checks and review are complete.
+- Push each completed `feat/*` or `fix/*` branch to GitHub and open a pull request targeting `develop`.
+- Merge completed milestone and task work through pull requests into `develop` after local checks and review are complete.
+- Open a pull request from `develop` to `main` only when preparing a new version release.
 - Keep changes PR-sized and milestone-scoped.
 
 ## Commit Policy
 
 - If files are modified in this repository, commit the completed work before finishing.
 - Do not include unrelated user changes in commits.
-- Use concise commit messages that name the milestone or documentation decision.
+- Use Conventional Commit messages in the form `feat(scope): message` or `fix(scope): message`.
+- Keep the scope concise and tied to the touched area, for example `feat(gitflow): require pr workflow`.
 
 ## Validation Policy
 
