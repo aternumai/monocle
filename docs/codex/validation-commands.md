@@ -1,14 +1,15 @@
 # Validation commands
 
-These commands will become concrete after the app scaffold exists.
+These commands are the baseline checks for the app scaffold.
 
-## Expected future commands
+## Commands
 
 ```text
 pnpm install
 pnpm lint
 pnpm typecheck
 pnpm test
+pnpm format
 pnpm tauri dev
 cargo test --manifest-path src-tauri/Cargo.toml
 cargo fmt --manifest-path src-tauri/Cargo.toml --check
