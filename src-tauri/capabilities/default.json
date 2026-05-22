@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Default capability set for the bootstrap Monocle app shell.",
+  "windows": ["main"],
+  "permissions": []
+}

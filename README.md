@@ -25,9 +25,14 @@ The MVP has three core features:
 
 ## Repository status
 
-This ZIP is a **documentation-only MVP planning repository**. It intentionally contains no application source code yet.
+This repository now includes the initial M0 application scaffold:
 
-It is designed so a developer or OpenAI Codex can turn the documentation into an implementation step by step.
+- Tauri v2 desktop shell;
+- React + TypeScript + Vite frontend;
+- Rust backend entry point;
+- formatting, linting, typecheck, and test commands.
+
+The scaffold is intentionally limited to a static app shell. It does not implement filesystem scanning, cleanup, Trash actions, telemetry, or cloud features yet.
 
 ## Recommended implementation stack
 
@@ -41,14 +46,52 @@ It is designed so a developer or OpenAI Codex can turn the documentation into an
 
 Initial MVP target: macOS 13+.
 
-## Suggested first Codex command
+## Suggested next Codex command
 
 From the `develop` branch, start with:
 
 ```text
-Read AGENTS.md, docs/12-codex-execution-guide.md, and docs/backlog/milestone-00-repo-bootstrap.md.
-Create the initial Tauri v2 + React + TypeScript + Rust project skeleton for Monocle.
-Do not implement scanning yet. Keep this PR limited to repository bootstrap, app shell, formatting, and test/lint commands.
+Read AGENTS.md, docs/12-codex-execution-guide.md, and docs/backlog/milestone-01-shell-ui.md.
+Implement the initial app shell UI for Monocle.
+Do not implement scanning, cleanup, or Trash actions yet. Keep this PR limited to shell UI structure and safe placeholder states.
+```
+
+## Local development
+
+Prerequisites:
+
+- Node.js 24 or compatible current LTS;
+- pnpm 10;
+- Rust 1.80 or newer;
+- Tauri v2 system prerequisites for macOS.
+
+Install dependencies:
+
+```sh
+pnpm install
+```
+
+Run the desktop app locally:
+
+```sh
+pnpm dev
+```
+
+Run frontend checks:
+
+```sh
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm format
+```
+
+Run Rust checks:
+
+```sh
+cargo test --manifest-path src-tauri/Cargo.toml
+cargo fmt --manifest-path src-tauri/Cargo.toml --check
+cargo clippy --manifest-path src-tauri/Cargo.toml -- -D warnings
 ```
 
 ## Documentation map
