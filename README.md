@@ -36,11 +36,14 @@ It is designed so a developer or OpenAI Codex can turn the documentation into an
 - Rust backend commands
 - SQLite for local scan results
 - BLAKE3 for duplicate hashing
+- pnpm for frontend package management
 - Controlled Tauri commands only; no unrestricted filesystem access from the frontend
+
+Initial MVP target: macOS 13+.
 
 ## Suggested first Codex command
 
-After committing this documentation repository to GitHub, start with:
+From the `develop` branch, start with:
 
 ```text
 Read AGENTS.md, docs/12-codex-execution-guide.md, and docs/backlog/milestone-00-repo-bootstrap.md.
@@ -64,4 +67,4 @@ Do not implement scanning yet. Keep this PR limited to repository bootstrap, app
 
 ## License
 
-This documentation package is prepared with an MIT license. You may change the license before publishing the final application if your open-source strategy changes.
+Monocle uses the MIT license unless a future ADR changes the open-source strategy.

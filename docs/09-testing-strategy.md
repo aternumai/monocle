@@ -81,3 +81,7 @@ Before any public DMG:
 - verify permission error copy;
 - verify Gatekeeper behavior;
 - verify app can be removed cleanly.
+
+## CI policy
+
+Initial development relies on local checks, not required CI. Add CI after the scaffold and local validation commands are stable enough to avoid maintaining placeholder workflows.

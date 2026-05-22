@@ -28,10 +28,11 @@ Options:
 - scan default folders;
 - choose folders;
 - include cache analysis;
-- include duplicate detection;
-- advanced full-disk scan option.
+- include duplicate detection.
 
-Full-disk scan should show a permission explanation.
+Default folders should be grouped as common home folders and developer/cache folders.
+
+Full-disk scan is not part of the MVP. Permission copy should explain inaccessible paths without nudging users into an unnecessary broad permission grant.
 
 ### Scan progress
 
@@ -91,8 +92,12 @@ Required elements:
 - item count;
 - estimated space;
 - full path list or expandable details;
-- checkbox: “I reviewed the paths”; optional for MVP;
+- required checkbox: "I reviewed the paths";
 - confirm button disabled when safety rules fail.
+
+## Language
+
+The MVP UI is English-only. Keep all user-facing copy centralized so later localization can be added without changing feature logic.
 
 ## Empty states
 

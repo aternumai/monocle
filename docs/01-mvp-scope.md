@@ -20,6 +20,13 @@ Default presets:
 - `~/Library/Developer/Xcode/Archives`
 - `~/Library/Developer/CoreSimulator`
 
+These presets are grouped in the UI as:
+
+- common home folders;
+- developer/cache folders.
+
+The MVP does not include a full-disk scan mode. Full-disk scanning requires a future ADR.
+
 ### 2. Top 100 largest files
 
 Show the top 100 files by allocated disk size when available, with fallback to logical size.
@@ -75,6 +82,10 @@ Actions included in MVP:
 - copy path;
 - move selected items to Trash after confirmation and metadata revalidation.
 
+Trash confirmation must require an explicit "I reviewed the paths" acknowledgement before the final action button is enabled.
+
+Large files and other results may include protected paths for visibility, but protected paths must not be actionable.
+
 ## Out of scope for MVP
 
 - Mac App Store distribution.
@@ -91,6 +102,8 @@ Actions included in MVP:
 - Fully automatic “clean all”.
 - Telemetry or analytics.
 - Multi-user admin mode.
+- Full-disk scanning.
+- Scanning or cleanup on `/Volumes`.
 
 ## Future options
 
@@ -103,3 +116,5 @@ These require ADRs before implementation:
 - App uninstaller.
 - Similar photo detection.
 - Time Machine local snapshot reporting.
+- Full-disk scan mode.
+- Explicitly selected external or mounted user volumes.

@@ -4,6 +4,7 @@
 
 - [ ] Name/legal review completed or working-name disclaimer retained.
 - [ ] License confirmed.
+- [ ] Public repository disclaimer remains accurate while name is uncleared.
 - [ ] README updated.
 - [ ] Safety model implemented and reviewed.
 - [ ] No permanent delete code path exists.
@@ -21,6 +22,8 @@
 - [ ] Lint/format passes.
 - [ ] Tauri build succeeds.
 - [ ] App launches on a clean macOS account.
+
+Initial source/dev build releases may skip signing/notarization while clearly documenting that no signed DMG is provided yet.
 
 ## Signing/notarization checklist
 

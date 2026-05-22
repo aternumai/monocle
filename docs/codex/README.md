@@ -14,6 +14,8 @@ This folder contains execution assets for using OpenAI Codex on Monocle.
 
 One Codex task should produce one PR-sized change.
 
+Use `develop` as the active integration branch. Merge completed documentation consolidation and milestone work into `main`.
+
 Avoid prompts like:
 
 ```text

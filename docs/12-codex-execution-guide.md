@@ -79,6 +79,14 @@ If a test conflicts with safety rules, update the test or architecture. Do not w
 9. `docs/codex/prompts/08-safe-trash-actions.md`
 10. `docs/codex/prompts/09-release-readiness.md`
 
+## Repository workflow
+
+Use `develop` as the active integration branch. Merge to `main` when documentation decisions are consolidated and after each completed implementation milestone.
+
+Use pnpm for frontend package management.
+
+Initial development uses local checks instead of required CI. Once code exists, run the narrowest relevant local checks during each task and the full local suite before a milestone merge.
+
 ## Prompt template
 
 ```text

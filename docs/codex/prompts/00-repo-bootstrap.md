@@ -12,6 +12,9 @@ Context:
 
 Constraints:
 - Use Tauri v2 + React + TypeScript + Rust.
+- Use pnpm for frontend package management.
+- Target macOS 13+ initially.
+- Centralize user-facing strings for future localization, while shipping English-only UI in the MVP.
 - Do not implement filesystem scanning yet.
 - Do not implement cleanup or Trash actions.
 - Preserve all documentation.

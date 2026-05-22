@@ -19,12 +19,14 @@ The MVP is acceptable when a user can:
 - No permanent deletion API exists in application code.
 - No frontend unrestricted filesystem access exists.
 - Trash actions require confirmation.
+- Trash confirmation requires an explicit path-review acknowledgement.
 - Trash actions revalidate metadata.
 - Duplicate cleanup keeps at least one copy.
 - Cache cleanup is allowlist-only.
 - Protected paths are not actionable.
 - Symlinks are not followed by default.
 - Permission errors do not crash scans.
+- Full-disk scan is not included in the MVP.
 
 ## Performance criteria
 
@@ -44,6 +46,7 @@ Initial targets, subject to refinement:
 - Safety level is visible for cache recommendations.
 - Inaccessible paths are explained.
 - Full Disk Access is optional and explained.
+- UI copy is English-only for the MVP, with centralized strings for later localization.
 
 ## Open-source criteria
 
@@ -53,3 +56,9 @@ Initial targets, subject to refinement:
 - Repository includes issue templates.
 - Repository includes PR template.
 - Release notes document limitations.
+
+## Development workflow criteria
+
+- Active work happens on `develop` or short-lived branches from `develop`.
+- `main` receives consolidated documentation and completed milestone work.
+- Local checks are run and documented before milestone merges.

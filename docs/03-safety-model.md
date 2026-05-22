@@ -26,7 +26,7 @@ The MVP must block destructive actions in or under:
 /var
 /Applications
 /Network
-/Volumes       # except explicitly selected user volumes in a future ADR
+/Volumes       # blocked in MVP; see ADR-0007 for future selected-volume support
 *.app          # app bundles and their internals
 ```
 
@@ -65,19 +65,20 @@ Before moving any item to Trash:
 1. Confirm the item is selected by the user.
 2. Confirm the full path is shown in the UI.
 3. Confirm the action is not permanent.
-4. Re-read metadata from disk.
-5. Compare against scan record:
+4. Confirm the user acknowledged reviewing the full path list.
+5. Re-read metadata from disk.
+6. Compare against scan record:
    - path;
    - file type;
    - size;
    - device id, if available;
    - inode, if available;
    - modification time, if useful.
-6. Block if metadata changed materially.
-7. Block if the path is now protected.
-8. For duplicate groups, confirm at least one copy remains.
-9. Move to Trash.
-10. Record an audit event locally.
+7. Block if metadata changed materially.
+8. Block if the path is now protected.
+9. For duplicate groups, confirm at least one copy remains.
+10. Move to Trash.
+11. Record an audit event locally.
 
 ## Duplicate cleanup rule
 
@@ -88,6 +89,8 @@ selected_for_trash_count <= file_count - 1
 ```
 
 If the user selects all files in a duplicate group, the UI must disable confirmation or auto-unselect the recommended keep candidate.
+
+The MVP should not auto-select duplicate files for cleanup. It may recommend a keep candidate, but the user chooses any files to move to Trash.
 
 ## Cache cleanup levels
 

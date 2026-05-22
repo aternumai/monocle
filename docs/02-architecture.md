@@ -4,12 +4,14 @@
 
 - Desktop shell: Tauri v2
 - Frontend: React + TypeScript + Vite
-- UI system: shadcn/ui or custom accessible components
+- Package manager: pnpm
+- UI system: Tailwind CSS with custom accessible components for the MVP; add shadcn/ui only when it removes meaningful implementation work
 - State/query: TanStack Query + small local state store
 - Backend: Rust Tauri commands
 - Storage: SQLite
 - Hashing: BLAKE3
 - Trash action: platform-appropriate Trash integration
+- Minimum macOS target: macOS 13+
 
 ## High-level architecture
 
@@ -111,6 +113,10 @@ Handles macOS-specific integrations:
 - Settings
 - Confirmation modal
 - Error and permission report
+
+## Internationalization
+
+The MVP UI ships in English only, but user-facing strings should be centralized from the first scaffold so additional locales can be added later without rewriting feature code.
 
 ## Command boundary
 

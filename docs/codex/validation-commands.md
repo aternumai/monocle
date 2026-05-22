@@ -19,6 +19,8 @@ cargo clippy --manifest-path src-tauri/Cargo.toml -- -D warnings
 
 Codex should run the narrowest relevant checks during development and the full suite before a PR is considered ready.
 
+Initial development uses local checks. Do not add placeholder CI only to satisfy workflow expectations before the scaffold is stable.
+
 ## If checks fail
 
 Codex must summarize:

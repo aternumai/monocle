@@ -6,11 +6,11 @@ Prepare Monocle to be versioned and released as an open-source project on GitHub
 
 ## Recommended repository setup
 
-- Public repository after name/legal review.
+- Public repository during early development is acceptable while retaining the working-name disclaimer.
 - MIT license by default unless strategy changes.
 - `main` as protected branch.
 - Pull requests required before merge.
-- Status checks required once CI exists.
+- Status checks required once CI exists; initial milestone work uses local checks.
 - CODEOWNERS for safety-sensitive files.
 
 ## Community files included
@@ -51,16 +51,20 @@ status:ready
 
 ## Branch strategy
 
-- `main`: latest reviewed development.
+- `main`: consolidated documentation and completed milestone work.
+- `develop`: active integration branch.
 - `release/v0.x`: release stabilization branches if needed.
 - feature branches: short-lived.
+
+Merge `develop` into `main` after documentation decisions are consolidated, then after each completed milestone during implementation.
 
 ## Release strategy
 
 1. Tag release: `v0.1.0`.
-2. Build signed/notarized macOS artifact.
-3. Generate checksum.
-4. Publish GitHub Release with:
+2. Publish an initial source/dev build release before signed distribution.
+3. Build signed/notarized macOS artifact after MVP safety work is complete.
+4. Generate checksum for binary artifacts.
+5. Publish GitHub Release with:
    - release notes;
    - DMG;
    - checksum;

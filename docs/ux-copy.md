@@ -31,7 +31,7 @@ Some folders could not be read because macOS blocked access.
 ```
 
 ```text
-You can keep using Monocle with selected folders, or grant Full Disk Access for broader scans.
+You can keep using Monocle with selected folders. Some protected locations may require Full Disk Access in a future broader scan mode.
 ```
 
 ## Cache copy

@@ -4,7 +4,7 @@
 
 The initial release is outside the Mac App Store.
 
-Recommended public distribution:
+Recommended binary distribution:
 
 ```text
 signed and notarized .dmg
@@ -18,6 +18,8 @@ Monocle should work without Full Disk Access by scanning selected folders and co
 
 Full Disk Access is optional and should be requested only for advanced full-disk scanning.
 
+The MVP does not include advanced full-disk scanning. Full Disk Access copy is retained to explain permission errors and future behavior, but the MVP should not prompt users to grant Full Disk Access as part of the default scan flow.
+
 ### UX requirement
 
 Explain:
@@ -28,12 +30,14 @@ Explain:
 - how to revoke it;
 - that Monocle does not upload scan results.
 
-Suggested copy:
+Suggested future full-disk scan copy:
 
 ```text
 Monocle can scan selected folders without Full Disk Access.
 For a full-disk scan, macOS may block access to protected locations unless you grant Full Disk Access in System Settings → Privacy & Security.
 ```
+
+MVP permission copy should focus on inaccessible selected or preset folders rather than advertising a full-disk scan mode.
 
 ## Default scan mode
 
@@ -42,6 +46,8 @@ Default scan should not require Full Disk Access:
 - selected folders;
 - common home folders;
 - known developer/cache paths when accessible.
+
+Full-disk scan mode is deferred until a future ADR.
 
 ## Permission errors
 
@@ -53,7 +59,7 @@ Permission denied is not a fatal error. It should be shown as:
 
 ## Signing and notarization plan
 
-For real distribution outside the Mac App Store:
+For binary distribution outside the Mac App Store:
 
 1. Enroll in Apple Developer Program.
 2. Create Developer ID certificate.
@@ -66,7 +72,7 @@ For real distribution outside the Mac App Store:
 ## Release channels
 
 - `dev`: local builds only.
-- `alpha`: signed internal/tester DMG.
+- `alpha`: source/dev build first; signed internal/tester DMG after the MVP safety work is complete.
 - `beta`: public GitHub Releases, still pre-1.0.
 - `stable`: 1.0+ releases.
 

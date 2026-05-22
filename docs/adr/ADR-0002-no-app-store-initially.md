@@ -10,7 +10,9 @@ A disk analyzer requires broad filesystem visibility. The Mac App Store sandbox 
 
 ## Decision
 
-Initial distribution will be outside the Mac App Store as a signed and notarized DMG.
+Initial distribution will be outside the Mac App Store.
+
+The first public development release may be source/dev-build only. A signed and notarized DMG is required before distributing a binary alpha to testers or broader public users.
 
 ## Consequences
 
@@ -24,5 +26,5 @@ Positive:
 Tradeoffs:
 
 - users must trust a downloaded app;
-- signing and notarization are still required for a good macOS experience;
+- signing and notarization are still required before binary distribution;
 - distribution and updates need separate planning.

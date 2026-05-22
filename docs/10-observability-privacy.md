@@ -32,10 +32,10 @@ The audit log records local destructive actions:
 - action type;
 - timestamp;
 - item count;
-- paths or path hashes depending on UX decision;
+- full local paths;
 - result.
 
-Because paths may be sensitive, the Settings screen should eventually allow clearing local audit logs.
+Because paths may be sensitive, the Settings screen should allow clearing local audit logs.
 
 ## Telemetry
 
