@@ -25,6 +25,8 @@ Use these sections for every pull request when applicable:
 ### Changed
 
 - Documented the public release hygiene process for changelog and release notes updates.
+- Reviewed the M0 repository bootstrap documentation and confirmed the starting
+  scope, safety constraints, and validation expectations.
 
 ## Versioning plan
 
